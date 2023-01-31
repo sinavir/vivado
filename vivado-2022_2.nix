@@ -1,6 +1,7 @@
 { stdenv
 , lib
 , bash
+, boards
 , coreutils
 , writeScript
 , gnutar
@@ -74,6 +75,7 @@ let
 
     builder = ./builder-2022_2.sh;
     inherit ncurses;
+    inherit boards;
 
     libPath = lib.makeLibraryPath [
       stdenv.cc.cc

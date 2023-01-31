@@ -99,3 +99,6 @@ sed -i -- "s|$extracted|/nix/store/00000000000000000000000000000000-vivado-2022.
 # Add Vivado and xsdk to bin folder
 mkdir $out/bin
 ln -s $out/opt/Vivado/2022.2/bin/vivado $out/bin/vivado
+
+# Add boards
+ln -s $boards $out/opt/Vivado/2022.2/data/boards/board_files
