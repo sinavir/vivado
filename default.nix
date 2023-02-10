@@ -13,5 +13,6 @@ let
       cp -r new/board_files/* $out/
       '';
   };
+  buildFHSUserEnv = pkgs.callPackage ./fhsuserenv { };
 in
-pkgs.callPackage ./vivado-2022_2.nix { inherit boards; }
+pkgs.callPackage ./vivado-2022_2.nix { inherit boards buildFHSUserEnv; }
