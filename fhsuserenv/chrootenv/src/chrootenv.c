@@ -127,7 +127,7 @@ int main(gint argc, gchar **argv) {
     if (uid != 0) {
       spit("/proc/self/setgroups", "deny");
       spit("/proc/self/uid_map", "%d %d 1", uid, uid);
-      spit("/proc/self/gid_map", "%d %d 1\n", gid, gid);
+      spit("/proc/self/gid_map", "27 27 1\n%d %d 1\n", gid, gid);
     }
 
     // If there is a /host directory, assume this is nested chrootenv and use it as host instead.
